@@ -1,0 +1,228 @@
+:root {
+  /* Färger */
+  --light: #fff;
+  --dark: #222;
+  --darkdarkgreenblue: #0d212c;
+  --green: #5c7658;
+  --lightyellow: #ffe797;
+  --lightgreen40: #bec8bc;
+  --red: #8c3333;
+
+  /* Rundningar */
+  --roundingLarge: 40px;
+  --roundingExtraLarge: 50px;
+
+  /* Avstånd */
+  --space-section: 7rem;
+  --space-inner: 5rem;
+  --space-inner-section-content: 4rem;
+  --space-component-gap: 2rem;
+  --space-content-gap: 1.5rem;
+  --space-default: 1rem;
+  --space-small: 0.5rem;
+  --space-extra-small: 0.25rem;
+
+  /* Fonter */
+  --font-primary: "Mulish", sans-serif;
+  --font-secondary: "Philosopher", sans-serif;
+
+  /* Textstorlekar */
+  --headingExtraLarge: 4rem;
+  --headingLarge: 3rem;
+  --heading-small: 2rem;
+  --font-size-semilarge: 1.5rem;
+  --font-size-ingress: 1.25rem;
+  --font-size-default: 1rem;
+}
+
+/* RESET */
+* {
+  /* Gör att padding och kantlinjer läggs inåt */
+  box-sizing: border-box;
+
+  /* motverkar luddighet på texten i olika webbläsare */
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: grayscale;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: var(--font-primary);
+}
+
+figure {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Typografi  */
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-secondary);
+}
+
+h1,
+h3 {
+  font-size: var(--headingLarge);
+  line-height: 1;
+}
+
+h2 {
+  font-size: var(--headingExtraLarge);
+  line-height: 1;
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+
+/* KOMPONENTER */
+.button--dark {
+  padding: 1rem 1.5rem;
+  border-radius: var(--roundingExtraLarge);
+  font-size: var(--font-size-ingress);
+  background-color: var(--darkdarkgreenblue);
+  color: var(--light);
+}
+
+/* HUVUDDESIGN */
+
+.container {
+  min-height: 100vh; /*Temporärt, för att kunna se min grid/rutnät*/
+  display: grid;
+  grid-template-columns:
+    [full-start] minmax(48px, 1fr) [inner-start] minmax(0, 1344px)
+    [inner-end] minmax(48px, 1fr)
+    [full-end];
+  /* margin-inline: auto; */
+}
+
+header,
+.hero,
+.news,
+.citation,
+.header {
+  grid-column: full;
+}
+
+/* HEADER */
+header {
+  display: grid;
+  grid-template-columns:
+    [full-start] minmax(48px, 1fr) [inner-start] minmax(0, 1344px)
+    [inner-end] minmax(48px, 1fr)
+    [full-end];
+  height: 100px;
+  /* background-color: #0d212c; */
+  position: fixed;
+}
+
+.header__inner {
+  grid-column: inner;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-secondary);
+  color: var(--light);
+  .logo {
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 100%;
+  }
+
+  .header-menu {
+    ul {
+      display: flex;
+      list-style: none;
+      gap: var(--space-content-gap);
+    }
+
+    .header-menu__link {
+      /* font-family: var(--font-primary); */
+      font-weight: 300;
+      font-size: var(--heading-small);
+      line-height: 100%;
+
+      &.header-menu__link--current {
+        font-weight: 800;
+      }
+    }
+  }
+}
+
+/* HERO */
+.hero {
+  /* height: 1126px; */
+  height: 110vh;
+  background-image: url(assets/images/Bakgrund3.jpg);
+  object-fit: cover;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+
+  .hero__inner {
+    max-width: 1120px;
+    display: flex;
+    align-items: end;
+  }
+
+  .portrait {
+    height: 750px;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+    margin-bottom: 100px;
+  }
+
+  .hero__text {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .hero__textandbutton {
+    background-color: #fff;
+    color: var(--dark);
+    opacity: 85%;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 300px;
+    max-width: 553px;
+
+    gap: 3rem;
+
+    border-radius: var(--roundingLarge);
+
+    .button--dark {
+      opacity: 100%;
+    }
+
+    .hero__button {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+}
+
+.news {
+  margin-top: -200px;
+}
