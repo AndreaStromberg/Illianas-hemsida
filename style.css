@@ -91,12 +91,20 @@ a {
 }
 
 /* KOMPONENTER */
-.button--dark {
+.button {
   padding: 1rem 1.5rem;
   border-radius: var(--roundingExtraLarge);
   font-size: var(--font-size-ingress);
-  background-color: var(--darkdarkgreenblue);
-  color: var(--light);
+
+  &.button--dark {
+    background-color: var(--darkdarkgreenblue);
+    color: var(--light);
+  }
+
+  &.button--light {
+    background-color: var(--lightyellow);
+    color: var(--dark);
+  }
 }
 
 /* HUVUDDESIGN */
@@ -114,7 +122,7 @@ a {
 header,
 .hero,
 .news,
-.citation,
+.news__lower .citation,
 .header {
   grid-column: full;
 }
@@ -223,6 +231,53 @@ header {
   }
 }
 
+/* NYHETSSEKTION */
 .news {
   margin-top: -200px;
+}
+
+.news__lower {
+  background-color: var(--green);
+  margin-top: -100px;
+}
+
+.news__content {
+  color: var(--light);
+
+  max-width: 1120px;
+  margin-inline: auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-inner-section-content);
+
+  .news__imageAndTextAndButtons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-inner-section-content);
+    max-width: 1120px;
+    margin-inline: auto;
+  }
+
+  .news__textAndButtons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: var(--space-component-gap) 0;
+  }
+
+  .news__text {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+    p {
+      font-size: var(--font-size-semilarge);
+    }
+  }
+
+  .news__buttons {
+    display: flex;
+    gap: var(--space-component-gap);
+  }
 }
