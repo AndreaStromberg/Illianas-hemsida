@@ -122,8 +122,10 @@ a {
 header,
 .hero,
 .news,
-.news__lower .citation,
-.header {
+.news__lower,
+.citation,
+.header,
+footer {
   grid-column: full;
 }
 
@@ -136,7 +138,8 @@ header {
     [full-end];
   height: 100px;
   /* background-color: #0d212c; */
-  position: fixed;
+  /* position: fixed; */
+  z-index: 999;
 }
 
 .header__inner {
@@ -176,6 +179,7 @@ header {
 /* HERO */
 .hero {
   /* height: 1126px; */
+  margin-top: -100px;
   height: 110vh;
   background-image: url(assets/images/Bakgrund3.jpg);
   object-fit: cover;
@@ -239,6 +243,7 @@ header {
 .news__lower {
   background-color: var(--green);
   margin-top: -100px;
+  padding-bottom: 250px;
 }
 
 .news__content {
@@ -279,5 +284,92 @@ header {
   .news__buttons {
     display: flex;
     gap: var(--space-component-gap);
+  }
+}
+
+/* CITATSEKTION */
+.citation {
+  margin-top: -180px;
+}
+.citation__waves {
+  img {
+    width: 100%;
+  }
+}
+
+.citation__lower {
+  background-color: var(--lightgreen40);
+  margin-top: -50px;
+  color: var(--dark);
+  padding-bottom: 200px;
+
+  .citation__lower--inner {
+    max-width: 1120px;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-inner-section-content);
+  }
+
+  .citation__citations {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .citation__citation {
+    max-width: 300px;
+    padding: var(--space-component-gap);
+    font-size: var(--font-size-semilarge);
+    background-color: var(--lightyellow);
+    border-radius: var(--roundingLarge);
+  }
+}
+
+/* FOOTER */
+footer {
+  margin-top: -150px;
+}
+
+.footer__lower {
+  background-color: var(--darkdarkgreenblue);
+  margin-top: -100px;
+  color: var(--light);
+  padding-bottom: var(--space-section);
+
+  .footer__lower--inner {
+    display: flex;
+    max-width: 1120px;
+    margin-inline: auto;
+    justify-content: space-between;
+    align-items: end;
+  }
+
+  .footer__menu {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-content-gap);
+  }
+
+  .footer__logo {
+    font-family: var(--font-secondary);
+    font-size: 40px;
+  }
+
+  .footer__email {
+    font-size: var(--font-size-semilarge);
+  }
+
+  .footer__social {
+    font-size: var(--font-size-semilarge);
+    display: flex;
+    align-items: center;
+    gap: var(--space-extra-small);
+  }
+
+  .footer__copyright {
+    display: flex;
+    align-items: center;
+    gap: var(--space-extra-small);
   }
 }
