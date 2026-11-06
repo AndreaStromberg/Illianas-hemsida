@@ -67,7 +67,7 @@ img {
   max-width: 100%;
 }
 
-/* Typografi  */
+/* TYPOGRAFI */
 h1,
 h2,
 h3,
@@ -104,7 +104,7 @@ a {
   &.button--dark {
     background-color: var(--darkdarkgreenblue);
     color: var(--light);
-    transition: background-color 385ms;
+    transition: background-color 400ms;
 
     &:hover {
       background-color: var(--yellow);
@@ -114,7 +114,7 @@ a {
   &.button--light {
     background-color: var(--lightyellow);
     color: var(--dark);
-    transition: background-color 385ms;
+    transition: background-color 400ms;
 
     &:hover {
       background-color: var(--yellow);
@@ -170,7 +170,7 @@ header {
     font-weight: 400;
     line-height: 100%;
 
-    transition: color 385ms;
+    transition: color 400ms;
 
     &:hover {
       color: var(--yellow);
@@ -184,7 +184,7 @@ header {
       gap: var(--space-content-gap);
 
       li {
-        transition: color 385ms;
+        transition: color 400ms;
 
         &:hover {
           color: var(--yellow);
@@ -384,7 +384,7 @@ footer {
     font-family: var(--font-secondary);
     font-size: 40px;
 
-    transition: color 385ms;
+    transition: color 400ms;
 
     &:hover {
       color: var(--yellow);
@@ -401,7 +401,7 @@ footer {
     align-items: center;
     gap: var(--space-extra-small);
 
-    transition: color 385ms;
+    transition: color 400ms;
 
     &:hover {
       color: var(--yellow);
