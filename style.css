@@ -7,6 +7,7 @@
   --lightyellow: #ffe797;
   --lightgreen40: #bec8bc;
   --red: #8c3333;
+  --yellow: #fa9e05;
 
   /* Rundningar */
   --roundingLarge: 40px;
@@ -96,14 +97,28 @@ a {
   border-radius: var(--roundingExtraLarge);
   font-size: var(--font-size-ingress);
 
+  &:hover {
+    background-color: var(--yellow);
+  }
+
   &.button--dark {
     background-color: var(--darkdarkgreenblue);
     color: var(--light);
+    transition: background-color 385ms;
+
+    &:hover {
+      background-color: var(--yellow);
+    }
   }
 
   &.button--light {
     background-color: var(--lightyellow);
     color: var(--dark);
+    transition: background-color 385ms;
+
+    &:hover {
+      background-color: var(--yellow);
+    }
   }
 }
 
@@ -154,6 +169,12 @@ header {
     font-size: 48px;
     font-weight: 400;
     line-height: 100%;
+
+    transition: color 385ms;
+
+    &:hover {
+      color: var(--yellow);
+    }
   }
 
   .header-menu {
@@ -161,6 +182,14 @@ header {
       display: flex;
       list-style: none;
       gap: var(--space-content-gap);
+
+      li {
+        transition: color 385ms;
+
+        &:hover {
+          color: var(--yellow);
+        }
+      }
     }
 
     .header-menu__link {
@@ -354,6 +383,12 @@ footer {
   .footer__logo {
     font-family: var(--font-secondary);
     font-size: 40px;
+
+    transition: color 385ms;
+
+    &:hover {
+      color: var(--yellow);
+    }
   }
 
   .footer__email {
@@ -365,6 +400,12 @@ footer {
     display: flex;
     align-items: center;
     gap: var(--space-extra-small);
+
+    transition: color 385ms;
+
+    &:hover {
+      color: var(--yellow);
+    }
   }
 
   .footer__copyright {
